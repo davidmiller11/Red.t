@@ -6,4 +6,6 @@ RedT::Application.routes.draw do
 
   resources :users
 
+  root 'sessions#new'
+
 end
