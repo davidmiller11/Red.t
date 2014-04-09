@@ -1,0 +1,9 @@
+<h2>Links#index</h2>
+
+<%= link_to 'New Link', new_user_link_path(current_user) %>
+
+<% @links.each do |link| %>
+  <p>
+    <%= link.url %>
+  </p>
+<% end %>

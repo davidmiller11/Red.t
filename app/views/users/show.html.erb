@@ -3,6 +3,11 @@
   <%= @user.email %>
 </p>
 
+<% @links.each do |link| %>
+  <p>
+    <%= link.url %>
+  </p>
+<% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %>
 <%= link_to 'Back', users_path %>

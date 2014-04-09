@@ -8,6 +8,13 @@
 </head>
 <body>
 
+  <header>
+    <% if current_user %>
+      Hello, <%= current_user.email %>
+      <%= link_to 'Logout', logout_path %>
+    <% end %>
+  </header>
+
 <%= yield %>
 
 </body>

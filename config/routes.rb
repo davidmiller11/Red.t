@@ -4,8 +4,14 @@ RedT::Application.routes.draw do
   post '/sessions', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
 
-  resources :users
+  get '/links/all', to: 'links#all'
 
-  root 'sessions#new'
+  resources :users do
+    resources :links, shallow: true
+  end
+
+
+
+  root 'links#index'
 
 end

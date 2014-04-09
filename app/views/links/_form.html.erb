@@ -1,0 +1,12 @@
+<%= form_for [current_user, @link] do |f| %>
+
+  <p>
+    URL<br />
+    <%= f.text_field :url %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
